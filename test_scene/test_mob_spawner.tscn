@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://crxutfh446eun"]
+
+[ext_resource type="PackedScene" uid="uid://bcr6djgpfv3dy" path="res://player/player.tscn" id="1_42qw1"]
+[ext_resource type="PackedScene" uid="uid://3b5mijnudda2" path="res://systems/mob_spawner.tscn" id="2_mkrkn"]
+[ext_resource type="PackedScene" uid="uid://qqqtfkixvxwf" path="res://UI/game_ui.tscn" id="3_x1ha4"]
+
+[node name="TestMobSpawner" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_42qw1")]
+position = Vector2(516, 272)
+sword_damage = 6
+health = 15
+max_health = 20
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="MobSpawner" parent="." instance=ExtResource("2_mkrkn")]
+
+[node name="GameUI" parent="." instance=ExtResource("3_x1ha4")]
